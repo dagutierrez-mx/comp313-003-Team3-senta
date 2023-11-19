@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import torch as torch
+#import torch as torch
 import numpy as np
 from transformers import RobertaTokenizer
 from transformers import AutoTokenizer
