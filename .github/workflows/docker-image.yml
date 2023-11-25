@@ -28,5 +28,5 @@ jobs:
         REPOSITORY: sentanapi
         IMAGE_TAG: latest
       run: |
-          docker build -f ./Dockerfile.ghub -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./webapp/.
+          docker build -f ./webapp/Dockerfile.ghub -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./webapp/.
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
