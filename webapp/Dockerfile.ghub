@@ -9,7 +9,7 @@ RUN pip install -r ./requirements.txt
 ENV LISTEN_PORT=8354
 EXPOSE 8354
 
-COPY webapp/* /webapp/
+COPY ./webapp/* /webapp/
 
 
 ENTRYPOINT ["python"]
