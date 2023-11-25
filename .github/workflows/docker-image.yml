@@ -28,5 +28,5 @@ jobs:
         REPOSITORY: sentanapi
         IMAGE_TAG: latest
       run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./SentanApi/.
+          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./webapp/.
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
