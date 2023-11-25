@@ -2,7 +2,7 @@ FROM python:3.8-slim-buster
 
 WORKDIR /webapp
 
-RUN pip install -r requirements.txt
+RUN pip install -r ./requirements.txt
 
 ENV LISTEN_PORT=8354
 EXPOSE 8354
