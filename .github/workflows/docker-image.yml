@@ -23,12 +23,10 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       
     - name: Build, Tag the Docker image, then push to Docker Hub
-      with:
-        dockerfile: ../Dockerfile
       env:
         REGISTRY: ${{ secrets.DOCKER_USERNAME }}
         REPOSITORY: sentanapi
         IMAGE_TAG: latest
       run: |
-          docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./webapp/.
+          docker build -f ../Dockerfile -t $REGISTRY/$REPOSITORY:$IMAGE_TAG ./webapp/.
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
