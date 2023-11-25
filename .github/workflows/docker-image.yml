@@ -23,6 +23,8 @@ jobs:
           password: ${{ secrets.DOCKER_TOKEN }}
       
     - name: Build, Tag the Docker image, then push to Docker Hub
+      with:
+        dockerfile: ../Dockerfile
       env:
         REGISTRY: ${{ secrets.DOCKER_USERNAME }}
         REPOSITORY: sentanapi
